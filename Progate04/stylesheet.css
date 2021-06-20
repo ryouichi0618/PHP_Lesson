@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.icon-spiciness {
+  width: 20px;
+}
+
+.menu-item {
+  display: inline-block;
+  width: 40%;
+  padding: 20px;
+  margin-top: 40px;
+}
