@@ -20,10 +20,13 @@
 <pre>
   <?php
   require('dbconnect.php');
-  $statement = $db->prepare('UPDATE memos SET memo=? WHERE id=?');
-  $statement->execute(array($_POST['memo'], $_POST['id']));
+  if (isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
+    $id = $_REQUEST['id'];
+    $statement = $db->prepare('DELETE FROM memos WHERE id=?');
+    $statement->execute(array($id));
+  }
   ?>
-  メモの内容を変更しました
+  メモの内容を削除しました
   <a href="index.php">memo一覧へ</a>
 </pre>
 </main>
