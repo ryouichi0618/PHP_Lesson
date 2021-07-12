@@ -41,7 +41,7 @@ $memos->execute();
   <?php endwhile ?>
 
   <?php if ($page >= 2 ):?>
-      <a href="index.php/?page=<?php print($page - 1)?>"><?php print($page - 1)?>ページ目へ</a>
+      <a href="index.php?page=<?php print($page - 1); ?>"><?php print($page - 1)?>ページ目へ</a>
   <?php endif ?>
   |
   <?php
@@ -50,7 +50,7 @@ $memos->execute();
   $max_page = ceil($count['cnt'] / 5);
   if ($max_page > $page):
   ?>
-  <a href="index.php/?page=<?php print($page + 1)?>"><?php print($page + 1)?>ページ目へ</a>
+  <a href="index.php?page=<?php print($page + 1); ?>"><?php print($page + 1)?>ページ目へ</a>
   <?php endif ?>
 </article>
 </main>
