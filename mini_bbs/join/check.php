@@ -55,7 +55,7 @@ if (!empty($_POST)) {
 		</dd>
 		<dt>写真など</dt>
 		<?php if ($_SESSION['join']['image'] !== ''):?>
-		<img src="../member_picture/<?php print(htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES))?>" alt="プロフィール画像">
+		<img src="../member_picture/<?php print(htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES))?>" width="300" height="300" alt="プロフィール画像">
 		<?php endif ?>
 		<dd>
 		</dd>

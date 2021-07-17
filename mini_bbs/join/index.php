@@ -111,6 +111,7 @@ if ($_REQUEST['action'] == 'rewrite') {
 	</dl>
 	<div><input type="submit" value="入力内容を確認する" /></div>
 </form>
+<p>&raquo;<a href="../login.php">登録済みの方はコチラ</a></p>
 </div>
 </body>
 </html>
