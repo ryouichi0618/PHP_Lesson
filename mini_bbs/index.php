@@ -73,12 +73,12 @@ if (isset($_REQUEST['res'])) {
     <p><?php print(htmlspecialchars($post['message'], ENT_QUOTES))?><span class="name">（<?php print(htmlspecialchars($post['name'], ENT_QUOTES))?>）</span>[<a href="index.php?res=<?php print(htmlspecialchars($post['id'],ENT_QUOTES))?>">Re</a>]</>
     <p class="day"><a href="view.php?id=<?php print(htmlspecialchars($post['id'], ENT_QUOTES)) ?>"><?php print(htmlspecialchars($post['created'], ENT_QUOTES))?></a>
     <?php if ($post['reply_message_id']):?>
-      <a href="view.php?id=<?php print(htmlspecialchars($post['reply_message_id'], ENT_QUOTES)) ?>">
-返信元のメッセージ</a>
+      <a href="view.php?id=<?php print(htmlspecialchars($post['reply_message_id'], ENT_QUOTES)) ?>">返信元のメッセージ</a>
     <?php endif ?>
-[<a href="delete.php?id="
-style="color: #F33;">削除</a>]
-    </p>
+    <?php if ($_SESSION['id'] === $post['member_id']):?>
+      [<a href="delete.php?id=<?php print(htmlspecialchars($post['id'], ENT_QUOTES))?>" style="color: #F33;">削除</a>]
+    <?php endif ?>
+    </>
     </div>
 <?php endforeach ?>
 
